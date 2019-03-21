@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
+    background-color: #FBFBF2;
+    color: #99D5C9;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -11,6 +13,7 @@ body {
 /*Navbar*/
 .bg-nickel {
     background-color: #747572 !important;
+    color: #99D5C9;
 }
 
 .navbar {
@@ -25,7 +28,8 @@ body {
 }
 
 .navbar a {
-    color: #F4FAFF;
+    /*color: #F4FAFF;*/
+    color: #99D5C9;
     margin: 0 1rem;
     font-size: large;
 }
@@ -34,4 +38,53 @@ body {
     color: #BBD557;
     cursor: pointer;
     text-decoration: none;
+}
+
+.home-hero {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    text-align: center;
+    padding: 1rem;
+    min-height: 600px;
+    text-shadow: 1px 1px 0 #747572;
+}
+
+.home-hero a {
+    position: relative;
+    display: block;
+    background-color: #838381 !important;
+    box-shadow: 0 6px #747572;
+    cursor: pointer;
+    margin: 10px auto;
+    text-shadow: none;
+}
+
+.home-hero a:hover {
+
+    color: #747572;
+    background-color: #BBD557 !important;
+    box-shadow: 0 4px #747572;
+    top: 2px;
+}
+
+.home-hero a:active {
+    color: #747572;
+    background-color: #BBD557 !important;
+    box-shadow: 0 1px #747572;
+    top: 6px;
+}
+
+
+.home-hero img {
+    display: inline-block;
+    width: 20%;
+    height: 30%;
 }
