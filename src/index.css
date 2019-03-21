@@ -40,6 +40,7 @@ body {
     text-decoration: none;
 }
 
+/*Home Page*/
 .home-hero {
     width: 100vw;
     height: 100vh;
@@ -87,4 +88,16 @@ body {
     display: inline-block;
     width: 20%;
     height: 30%;
+}
+
+/*Authentication Form*/
+.form-group {
+    color: #747572;
+    font-size: large;
+}
+
+.form-group input:focus {
+    outline: none !important;
+    border-color: #99D5C9;
+    box-shadow: 0 0 5px #99D5C9;
 }

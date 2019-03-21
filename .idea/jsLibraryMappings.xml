@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{@types/jsonwebtoken, @types/react-router, @types/react-router-dom, @types/reduce-reducers}" />
-    <excludedPredefinedLibrary name="HTML" />
+    <file url="PROJECT" libraries="{@types/jsonwebtoken, @types/react, @types/react-router, @types/react-router-dom, @types/reduce-reducers}" />
+    <includedPredefinedLibrary name="HTTP Response Handler" />
   </component>
 </project>
