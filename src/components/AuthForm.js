@@ -24,13 +24,15 @@ class AuthForm extends Component {
 	
 	render() {
 		const {email, username, password, profileImage} = this.state;
-		const {heading, buttonText, signUp} = this.props;
+		const {heading, buttonText, signUp, errors, history, removeError} = this.props;
+		history.listen(() => removeError());
 		return (
 			<div>
 				<div className="row justify-content-md-center text-center mt-5">
 					<div className="col-md-6">
 						<form onSubmit={this.handleSubmit}>
 							<h2>{heading}</h2>
+							{errors.message && ( <div className="alert alert-danger"> {errors.message}</div> )}
 							<div className="form-group text-left mt-5">
 								<div className="form-group">
 									<label htmlFor="email">Email address</label>
