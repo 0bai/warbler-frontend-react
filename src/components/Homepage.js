@@ -7,7 +7,7 @@ const Homepage = () => (
 		<img src={logo} alt="Warbler Logo"/>
 		<h1>What's Happening?</h1>
 		<h4>New to Warbler?</h4>
-		<Link to="/signup" className="btn bg-nickel">
+		<Link to="/signup" className="btn tappy-btn">
 			Sign up here
 		</Link>
 	</div>
