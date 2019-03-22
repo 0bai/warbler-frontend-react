@@ -20,13 +20,20 @@ class AuthForm extends Component {
 		const authType = this.props.signUp ? 'signup' : 'signin';
 		this.props.onAuth(authType, this.state)
 			.then(this.props.history.push('/'))
-			.catch((e) => e);
+			.catch(() => {
+				this.props.history.push(`/${authType}`);
+			});
 	};
 	
 	render() {
 		const {email, username, password, profileImage} = this.state;
 		const {heading, buttonText, signUp, errors, history, removeError} = this.props;
-		history.listen(() => removeError());
+		if (errors.message) {
+			const unlisten = history.listen(() => {
+				removeError();
+				unlisten();
+			});
+		}
 		return (
 			<div>
 				<div className="row justify-content-md-center text-center mt-5">
