@@ -10,6 +10,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+h2 {
+    text-shadow: 1px 1px 0 #747572;
+}
+
 /*Navbar*/
 .bg-nickel {
     background-color: #747572 !important;
