@@ -9,11 +9,17 @@ class AuthForm extends Component {
 			password: "",
 			profileImage: ""
 		};
-		
 	}
 	
 	handleChange = (e) => {
 		this.setState({[ e.target.name ]: e.target.value});
+	};
+	
+	handleSubmit = (e) => {
+		e.preventDefault();
+		const authType = this.props.signUp ? 'signup' : 'signin';
+		this.props.onAuth(authType, this.state)
+			.then(console.log("logged in successfully"));
 	};
 	
 	render() {
@@ -63,6 +69,7 @@ class AuthForm extends Component {
 										</div>
 									</div>
 								)}
+								<button type="submit" className="btn btn-block btn-lg tappy-btn">{buttonText}</button>
 							</div>
 						</form>
 					</div>
