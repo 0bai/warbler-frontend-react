@@ -9,21 +9,22 @@ class AuthForm extends Component {
 			password: "",
 			profileImage: ""
 		};
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 	
 	handleChange = (e) => {
 		this.setState({[ e.target.name ]: e.target.value});
 	};
 	
-	handleSubmit = (e) => {
+	async handleSubmit(e) {
 		e.preventDefault();
 		const authType = this.props.signUp ? 'signup' : 'signin';
-		this.props.onAuth(authType, this.state)
-			.then(this.props.history.push('/'))
-			.catch(() => {
-				this.props.history.push(`/${authType}`);
-			});
+		await this.props.onAuth(authType, this.state);
+		if (!this.props.errors.message) {
+			this.props.history.push("/");
+		}
 	};
+
 	
 	render() {
 		const {email, username, password, profileImage} = this.state;
