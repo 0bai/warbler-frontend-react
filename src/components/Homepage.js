@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import logo from '../images/logo.png';
+import Timeline from './Timeline';
 
 const Homepage = ({currentUser}) => {
 	if (!currentUser.isAuthenticated) {
@@ -15,7 +16,7 @@ const Homepage = ({currentUser}) => {
 			</div>
 		);
 	}
-	return ( <div><h1>You Made it!</h1></div> );
+	return ( <div><Timeline/></div> );
 };
 
 export default Homepage;
