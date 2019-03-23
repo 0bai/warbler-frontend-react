@@ -4,9 +4,9 @@ import thunk from "redux-thunk";
 
 export function configureStore() {
 	// store
+	const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 	return createStore(
 		rootReducer,
-		compose(applyMiddleware(thunk),
-			window.devToolsExtension ? window.devToolsExtension() : f => f)
-	);
+		composeEnhancers(applyMiddleware(thunk)
+		));
 }
