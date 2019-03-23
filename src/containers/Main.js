@@ -40,7 +40,7 @@ const Main = props => {
 							heading='Join Warbler.' {...props}/> );
 				}
 				}/>
-				<Route path='/user/:id/messages/new' component={withAuth(MessageForm)}/>
+				<Route path='/users/:id/messages/new' component={withAuth(MessageForm)}/>
 			</Switch>
 		</div>
 	);
