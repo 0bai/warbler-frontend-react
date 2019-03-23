@@ -106,3 +106,21 @@ h2 {
     border-color: #99D5C9;
     box-shadow: 0 0 5px #99D5C9;
 }
+
+/*Timeline*/
+#messages .list-group-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 7px 20px 12px;
+    color: #747572;
+}
+
+#messages:not(.no-hover) .list-group-item:hover {
+    background-color: #99D5C9;
+}
+
+/*MessageItem*/
+.profile-image {
+    height: 100px;
+    width: 100px;
+}

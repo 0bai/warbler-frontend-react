@@ -16,7 +16,10 @@ const Homepage = ({currentUser}) => {
 			</div>
 		);
 	}
-	return ( <div><Timeline/></div> );
+	return (
+		<div>
+			<Timeline profileImage={currentUser.user.profileImage} username={currentUser.user.username}/>
+		</div> );
 };
 
 export default Homepage;
