@@ -3,7 +3,7 @@ import Moment from 'react-moment';
 import {Link} from 'react-router-dom';
 import defaultProfilePic from '../images/egg.png';
 
-const MessageItem = ({date, profileImage, text, username}) => {
+const MessageItem = ({date, profileImage, text, username, removeMessage, isOwner}) => {
 	return (
 		<div>
 			<li className="list-group-item">
@@ -11,11 +11,12 @@ const MessageItem = ({date, profileImage, text, username}) => {
 				<div className='messageArea'>
 					<Link to='/'>@{username} &nbsp;</Link>
 					<span className='text-muted'>
-					<Moment className='text-muted' format='DD MM YYYY'>
+					<Moment className='text-muted' format='Do MMM YYYY'>
 						{date}
 					</Moment>
 				</span>
 					<p>{text}</p>
+					{isOwner && <button className="btn btn-danger" onClick={removeMessage}>Delete</button>}
 				</div>
 			</li>
 		</div>
